@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Planet Portfolio mark</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#193a27" />
+      <stop offset="100%" stop-color="#39694a" />
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c5da95" />
+      <stop offset="100%" stop-color="#92b06b" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)" />
+  <path
+    d="M32 84c0-28 21-50 54-56-6 38-28 60-56 68 0-4 1-8 2-12Zm18-12c0 10 5 19 15 26 14-2 26-9 35-22-8 0-17-2-25-7-9-5-16-12-21-19-3 7-4 14-4 22Z"
+    fill="url(#leaf)"
+  />
+</svg>

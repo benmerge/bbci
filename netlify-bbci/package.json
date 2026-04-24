@@ -1,0 +1,11 @@
+{
+  "name": "planet-portfolio-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Local prototype for the Planet Portfolio consumer and ops experience.",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "dev:open": "python3 -m http.server 4173"
+  }
+}
