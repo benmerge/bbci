@@ -1,2 +1,0 @@
-# bbci
-Badgerland website pack
