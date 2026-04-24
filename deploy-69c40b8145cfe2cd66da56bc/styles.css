@@ -650,6 +650,24 @@ h2 {
   left: -9999px;
 }
 
+.form-status {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  min-height: 1.25rem;
+}
+
+.form-status[data-state="success"] {
+  color: #1f6b3a;
+}
+
+.form-status[data-state="error"] {
+  color: #a02020;
+}
+
+.form-status[data-state="pending"] {
+  color: #555;
+}
+
 .form-fields {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

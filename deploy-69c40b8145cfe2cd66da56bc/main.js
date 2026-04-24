@@ -58,3 +58,65 @@ const navObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => navObserver.observe(section));
+
+const contactForms = [...document.querySelectorAll("form[data-contact-form]")];
+
+contactForms.forEach((form) => {
+  const statusEl = document.createElement("p");
+  statusEl.className = "form-status";
+  statusEl.setAttribute("role", "status");
+  statusEl.setAttribute("aria-live", "polite");
+  form.appendChild(statusEl);
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = form.querySelector("button[type='submit']");
+    const originalLabel = submitButton ? submitButton.textContent : "";
+    const formName = form.dataset.contactForm;
+
+    const data = new FormData(form);
+    const fields = {};
+    let botField = "";
+    for (const [key, value] of data.entries()) {
+      if (key === "form-name") continue;
+      if (key === "bot-field") {
+        botField = String(value ?? "");
+        continue;
+      }
+      fields[key] = typeof value === "string" ? value : "";
+    }
+
+    statusEl.textContent = "Sending...";
+    statusEl.dataset.state = "pending";
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formName, fields, botField }),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => ({}));
+        throw new Error(body.error || `Request failed (${response.status})`);
+      }
+
+      statusEl.textContent = "Thanks — your message was sent. BBCI will follow up shortly.";
+      statusEl.dataset.state = "success";
+      form.reset();
+    } catch (err) {
+      statusEl.textContent = `Sorry, we couldn't send that. ${err.message}. You can also email info@badgerland-BBCI.org.`;
+      statusEl.dataset.state = "error";
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+      }
+    }
+  });
+});
