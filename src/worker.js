@@ -1,39 +1,54 @@
-export async function onRequestPost({ request, env }) {
-  const cors = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
+    if (url.pathname === "/api/contact") {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          status: 204,
+          headers: corsHeaders(),
+        });
+      }
+      if (request.method !== "POST") {
+        return json({ error: "Method not allowed" }, 405);
+      }
+      return handleContact(request, env);
+    }
+
+    return env.ASSETS.fetch(request);
+  },
+};
+
+async function handleContact(request, env) {
   let payload;
   try {
     payload = await request.json();
   } catch {
-    return json({ error: "Invalid JSON" }, 400, cors);
+    return json({ error: "Invalid JSON" }, 400);
   }
 
   const { formName, fields, botField } = payload ?? {};
 
-  if (botField) return json({ ok: true }, 200, cors);
+  if (botField) return json({ ok: true }, 200);
 
   if (!formName || !fields || typeof fields !== "object") {
-    return json({ error: "Missing formName or fields" }, 400, cors);
+    return json({ error: "Missing formName or fields" }, 400);
   }
 
   const email = String(fields.email ?? "").trim();
   const name = String(fields.name ?? "").trim();
   const message = String(fields.message ?? "").trim();
   if (!email || !name || !message) {
-    return json({ error: "Missing required fields" }, 400, cors);
+    return json({ error: "Missing required fields" }, 400);
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return json({ error: "Invalid email" }, 400, cors);
+    return json({ error: "Invalid email" }, 400);
   }
 
   const to = env.CONTACT_TO_EMAIL;
   const from = env.CONTACT_FROM_EMAIL || "BBCI <onboarding@resend.dev>";
   if (!env.RESEND_API_KEY || !to) {
-    return json({ error: "Email service not configured" }, 500, cors);
+    return json({ error: "Email service not configured" }, 500);
   }
 
   const subjectMap = {
@@ -45,7 +60,10 @@ export async function onRequestPost({ request, env }) {
 
   const rows = Object.entries(fields)
     .filter(([k]) => k !== "bot-field")
-    .map(([k, v]) => `<tr><td style="padding:4px 12px 4px 0;vertical-align:top;color:#555"><strong>${escapeHtml(k)}</strong></td><td style="padding:4px 0">${escapeHtml(String(v ?? "")).replace(/\n/g, "<br>")}</td></tr>`)
+    .map(
+      ([k, v]) =>
+        `<tr><td style="padding:4px 12px 4px 0;vertical-align:top;color:#555"><strong>${escapeHtml(k)}</strong></td><td style="padding:4px 0">${escapeHtml(String(v ?? "")).replace(/\n/g, "<br>")}</td></tr>`,
+    )
     .join("");
 
   const html = `<div style="font-family:system-ui,sans-serif;color:#111"><h2 style="margin:0 0 12px">${escapeHtml(subject)}</h2><p style="margin:0 0 12px;color:#555">Submitted via <code>${escapeHtml(formName)}</code></p><table>${rows}</table></div>`;
@@ -73,27 +91,27 @@ export async function onRequestPost({ request, env }) {
 
   if (!res.ok) {
     const detail = await res.text();
-    return json({ error: "Failed to send", detail }, 502, cors);
+    return json({ error: "Failed to send", detail }, 502);
   }
 
-  return json({ ok: true }, 200, cors);
+  return json({ ok: true }, 200);
 }
 
-export function onRequestOptions() {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    },
-  });
+function corsHeaders() {
+  return {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
 }
 
-function json(data, status, extraHeaders = {}) {
+function json(data, status) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { "Content-Type": "application/json", ...extraHeaders },
+    headers: {
+      "Content-Type": "application/json",
+      ...corsHeaders(),
+    },
   });
 }
 

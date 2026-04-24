@@ -1,0 +1,10 @@
+{
+  "name": "bbci",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-04-01",
+  "assets": {
+    "directory": "./deploy-69c40b8145cfe2cd66da56bc",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  }
+}
