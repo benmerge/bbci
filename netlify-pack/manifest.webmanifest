@@ -1,0 +1,17 @@
+{
+  "name": "40 Century Grain Inventory",
+  "short_name": "40CG MRP",
+  "description": "Mobile-first inventory management and material requirements planning for 40 Century Grain.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#2d5b4f",
+  "icons": [
+    {
+      "src": "./assets/bbci-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
