@@ -352,53 +352,34 @@ h1 {
 
 .hero-art {
   position: relative;
-  min-height: 560px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 0;
   margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--forest-900);
-  background: var(--forest-950);
-}
-
-.hero-art::before,
-.hero-art::after {
-  position: absolute;
-  right: 0;
-  left: 0;
-  content: "";
-}
-
-.hero-art::before {
-  top: 1rem;
-  right: 1rem;
-  bottom: 24%;
-  left: 1rem;
-  border: 1px solid var(--border);
-  background: var(--sand-100);
-}
-
-.hero-art::after {
-  bottom: 24%;
-  height: 7%;
-  background: var(--water-500);
+  overflow: visible;
+  border: 0;
+  background: transparent;
 }
 
 .hero-art > img {
-  position: relative;
-  z-index: 1;
   display: block;
-  width: min(78%, 340px);
+  width: min(82%, 380px);
   height: auto;
-  margin: 2.3rem auto 0;
+  margin: 0 auto;
+  filter:
+    drop-shadow(2px 0 0 var(--sand-100))
+    drop-shadow(-2px 0 0 var(--sand-100))
+    drop-shadow(0 2px 0 var(--sand-100))
+    drop-shadow(0 -2px 0 var(--sand-100))
+    drop-shadow(10px 12px 0 rgba(20, 42, 29, 0.34));
 }
 
 .hero-art figcaption {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1.35rem 1.5rem;
-  border-top: 1px solid rgba(255, 253, 248, 0.35);
+  width: min(82%, 380px);
+  margin-top: 1.5rem;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 4px solid var(--water-500);
   color: var(--paper);
 }
 
@@ -916,7 +897,7 @@ h2 {
   }
 
   .hero-art {
-    min-height: 520px;
+    padding-block: 1.5rem;
   }
 
   .benefit-columns,
@@ -970,12 +951,12 @@ h2 {
     font-size: clamp(3.4rem, 16vw, 5rem);
   }
 
-  .hero-art {
-    min-height: 460px;
+  .hero-art > img {
+    width: min(78%, 310px);
   }
 
-  .hero-art > img {
-    width: min(74%, 290px);
+  .hero-art figcaption {
+    width: min(78%, 310px);
   }
 
   .pilot-facts {
