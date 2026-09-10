@@ -305,7 +305,7 @@ h1 {
   margin: 0;
   overflow: hidden;
   border: 1px solid var(--forest-900);
-  background: var(--sky-300);
+  background: var(--forest-950);
 }
 
 .hero-art::before,
@@ -317,14 +317,17 @@ h1 {
 }
 
 .hero-art::before {
-  bottom: 0;
-  height: 33%;
-  background: var(--forest-800);
+  top: 1rem;
+  right: 1rem;
+  bottom: 24%;
+  left: 1rem;
+  border: 1px solid var(--border);
+  background: var(--sand-100);
 }
 
 .hero-art::after {
-  bottom: 33%;
-  height: 8%;
+  bottom: 24%;
+  height: 7%;
   background: var(--water-500);
 }
 
