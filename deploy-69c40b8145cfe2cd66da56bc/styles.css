@@ -375,15 +375,6 @@ h1 {
     drop-shadow(10px 12px 0 rgba(20, 42, 29, 0.34));
 }
 
-.hero-art figcaption {
-  width: min(82%, 380px);
-  margin-top: 1.5rem;
-  padding: 0.15rem 0 0.15rem 1rem;
-  border-left: 4px solid var(--water-500);
-  color: var(--paper);
-}
-
-.hero-art figcaption span,
 .pilot-facts span {
   display: block;
   margin-bottom: 0.3rem;
@@ -391,14 +382,6 @@ h1 {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-.hero-art figcaption strong {
-  display: block;
-  max-width: 18rem;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 500;
 }
 
 .pilot-facts {
@@ -468,6 +451,25 @@ h1 {
   grid-column: 1 / -1;
 }
 
+#overview {
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+#overview .section-heading {
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding-bottom: 1rem;
+}
+
+#overview .section-heading h2 {
+  max-width: 15ch;
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
+}
+
+#overview .section-text {
+  padding-top: 0.35rem;
+}
+
 h2 {
   max-width: 13ch;
   color: var(--forest-950);
@@ -496,6 +498,15 @@ h2 {
   font-family: "Fraunces", Georgia, serif;
   font-size: clamp(1.6rem, 3vw, 2.6rem);
   line-height: 1.28;
+}
+
+#overview .quote-band {
+  padding: clamp(1.5rem, 3.5vw, 2.75rem) clamp(1.25rem, 4vw, 3rem);
+}
+
+#overview .quote-band p {
+  max-width: 48ch;
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
 }
 
 .benefit-columns,
