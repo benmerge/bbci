@@ -49,7 +49,7 @@
           <a href="#how-it-works">How It Works</a>
           <a href="#impact">Impact</a>
           <a href="#partners">Partners</a>
-          <a class="nav-cta" href="#form-farmer">Farmer Enrollment</a>
+          <a class="nav-cta" href="#dialog-farmer" data-dialog-target="#dialog-farmer" aria-haspopup="dialog">Farmer Enrollment</a>
         </nav>
       </header>
 
@@ -64,11 +64,11 @@
               conservation.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#form-farmer">
+              <a class="button button-primary" href="#dialog-farmer" data-dialog-target="#dialog-farmer" aria-haspopup="dialog">
                 Farmer Enrollment
               </a>
               <a class="button button-secondary" href="#how-it-works">Learn How It Works</a>
-              <a class="button button-secondary" href="#form-partner">Partner With BBCI</a>
+              <a class="button button-secondary" href="#dialog-partner" data-dialog-target="#dialog-partner" aria-haspopup="dialog">Partner With BBCI</a>
             </div>
           </div>
 
@@ -242,7 +242,7 @@
                 Turn marginal acres into nature-based solutions with monitoring managed and
                 conservation designed around real farm operations.
               </p>
-              <a href="#form-farmer">Enroll your farm</a>
+              <a href="#dialog-farmer" data-dialog-target="#dialog-farmer" aria-haspopup="dialog">Enroll your farm</a>
             </article>
             <article class="audience-card">
               <h3>Communities and public partners</h3>
@@ -250,7 +250,7 @@
                 Use outcome-verified evidence to coordinate watershed planning, resilience
                 investments, and working-lands conservation.
               </p>
-              <a href="#form-partner">Explore partnerships</a>
+              <a href="#dialog-partner" data-dialog-target="#dialog-partner" aria-haspopup="dialog">Explore partnerships</a>
             </article>
             <article class="audience-card">
               <h3>Researchers and conservation partners</h3>
@@ -258,7 +258,7 @@
                 Help shape indicators, methods, and interpretation so corridor science stays
                 credible and useful on the ground.
               </p>
-              <a href="#form-partner">Collaborate with us</a>
+              <a href="#dialog-partner" data-dialog-target="#dialog-partner" aria-haspopup="dialog">Collaborate with us</a>
             </article>
             <article class="audience-card">
               <h3>Funders and investors</h3>
@@ -266,7 +266,7 @@
                 Support outcome-verified conservation that links farm-level stewardship to
                 landscape-scale impact and long-term evidence building.
               </p>
-              <a href="#form-support">Support the pilot</a>
+              <a href="#dialog-support" data-dialog-target="#dialog-support" aria-haspopup="dialog">Support the pilot</a>
             </article>
           </div>
         </section>
@@ -310,176 +310,110 @@
               in BBCI's pilot launch.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#form-farmer">
+              <a class="button button-primary" href="#dialog-farmer" data-dialog-target="#dialog-farmer" aria-haspopup="dialog">
                 Farmer Enrollment
               </a>
-              <a class="button button-secondary" href="#form-partner">
+              <a class="button button-secondary" href="#dialog-partner" data-dialog-target="#dialog-partner" aria-haspopup="dialog">
                 Partner With BBCI
               </a>
-              <a class="button button-secondary" href="#form-support">
+              <a class="button button-secondary" href="#dialog-support" data-dialog-target="#dialog-support" aria-haspopup="dialog">
                 Support the Pilot
               </a>
             </div>
           </div>
         </section>
 
-        <section class="section forms reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Contact Forms</p>
-            <h2>Choose the form that fits your role.</h2>
-            <p class="section-text">
-              These forms submit directly through the site. Pick the option that best matches why
-              you're reaching out and BBCI can route it quickly.
-            </p>
-          </div>
-
-          <div class="form-grid">
-            <article id="form-farmer" class="form-card">
-              <div class="form-card-head">
-                <p class="form-kicker">Farmer Enrollment</p>
-                <h3>Landowner and farmer interest</h3>
-                <p>
-                  Use this form if you want to ask about acreage, eligibility, timing, or joining
-                  the pilot.
-                </p>
-              </div>
-              <form
-                name="bbci-farmer-enrollment"
-                method="POST"
-                data-contact-form="bbci-farmer-enrollment"
-              >
-                <input type="hidden" name="form-name" value="bbci-farmer-enrollment" />
-                <p class="hidden-field">
-                  <label>Do not fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                <div class="form-fields">
-                  <label>
-                    Full name
-                    <input type="text" name="name" required />
-                  </label>
-                  <label>
-                    Email
-                    <input type="email" name="email" required />
-                  </label>
-                  <label>
-                    Phone
-                    <input type="tel" name="phone" />
-                  </label>
-                  <label>
-                    County or location
-                    <input type="text" name="location" />
-                  </label>
-                  <label class="field-wide">
-                    Tell us about your land or question
-                    <textarea name="message" rows="5" required></textarea>
-                  </label>
-                </div>
-                <button class="button button-solid" type="submit">Send Farmer Inquiry</button>
-              </form>
-            </article>
-
-            <article id="form-partner" class="form-card">
-              <div class="form-card-head">
-                <p class="form-kicker">Partnership</p>
-                <h3>Community, research, or conservation partnership</h3>
-                <p>
-                  Use this form if you want to collaborate on science, implementation, outreach, or
-                  public-private alignment.
-                </p>
-              </div>
-              <form
-                name="bbci-partnership"
-                method="POST"
-                data-contact-form="bbci-partnership"
-              >
-                <input type="hidden" name="form-name" value="bbci-partnership" />
-                <p class="hidden-field">
-                  <label>Do not fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                <div class="form-fields">
-                  <label>
-                    Full name
-                    <input type="text" name="name" required />
-                  </label>
-                  <label>
-                    Organization
-                    <input type="text" name="organization" />
-                  </label>
-                  <label>
-                    Email
-                    <input type="email" name="email" required />
-                  </label>
-                  <label>
-                    Partnership type
-                    <select name="partnership_type" required>
-                      <option value="">Select one</option>
-                      <option>Community / public partner</option>
-                      <option>Research partner</option>
-                      <option>Conservation partner</option>
-                      <option>Other</option>
-                    </select>
-                  </label>
-                  <label class="field-wide">
-                    What would you like to work on?
-                    <textarea name="message" rows="5" required></textarea>
-                  </label>
-                </div>
-                <button class="button button-solid" type="submit">Send Partnership Inquiry</button>
-              </form>
-            </article>
-
-            <article id="form-support" class="form-card">
-              <div class="form-card-head">
-                <p class="form-kicker">Pilot Support</p>
-                <h3>Funding and pilot support</h3>
-                <p>
-                  Use this form if you are interested in helping fund, sponsor, or support the BBCI
-                  pilot.
-                </p>
-              </div>
-              <form
-                name="bbci-pilot-support"
-                method="POST"
-                data-contact-form="bbci-pilot-support"
-              >
-                <input type="hidden" name="form-name" value="bbci-pilot-support" />
-                <p class="hidden-field">
-                  <label>Do not fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                <div class="form-fields">
-                  <label>
-                    Full name
-                    <input type="text" name="name" required />
-                  </label>
-                  <label>
-                    Organization
-                    <input type="text" name="organization" />
-                  </label>
-                  <label>
-                    Email
-                    <input type="email" name="email" required />
-                  </label>
-                  <label>
-                    Interest area
-                    <select name="interest_area" required>
-                      <option value="">Select one</option>
-                      <option>Pilot funding</option>
-                      <option>Program sponsorship</option>
-                      <option>Strategic support</option>
-                      <option>Other</option>
-                    </select>
-                  </label>
-                  <label class="field-wide">
-                    Tell us what kind of support you're considering
-                    <textarea name="message" rows="5" required></textarea>
-                  </label>
-                </div>
-                <button class="button button-solid" type="submit">Send Support Inquiry</button>
-              </form>
-            </article>
-          </div>
-        </section>
       </main>
+
+      <dialog id="dialog-farmer" class="contact-dialog" aria-labelledby="dialog-farmer-title">
+        <div class="dialog-shell">
+          <div class="dialog-header">
+            <p class="dialog-context">Farmer enrollment</p>
+            <button class="dialog-close" type="button" data-dialog-close aria-label="Close farmer enrollment form">Close</button>
+          </div>
+          <article class="form-card">
+            <div class="form-card-head">
+              <p class="form-kicker">Farmer Enrollment</p>
+              <h3 id="dialog-farmer-title">Landowner and farmer interest</h3>
+              <p>Use this form if you want to ask about acreage, eligibility, timing, or joining the pilot.</p>
+            </div>
+            <form name="bbci-farmer-enrollment" method="POST" data-contact-form="bbci-farmer-enrollment">
+              <input type="hidden" name="form-name" value="bbci-farmer-enrollment" />
+              <p class="hidden-field">
+                <label>Do not fill this out if you're human: <input name="bot-field" tabindex="-1" aria-hidden="true" autocomplete="off" /></label>
+              </p>
+              <div class="form-fields">
+                <label>Full name<input type="text" name="name" required /></label>
+                <label>Email<input type="email" name="email" required /></label>
+                <label>Phone<input type="tel" name="phone" /></label>
+                <label>County or location<input type="text" name="location" /></label>
+                <label class="field-wide">Tell us about your land or question<textarea name="message" rows="5" required></textarea></label>
+              </div>
+              <button class="button button-solid" type="submit">Send Farmer Inquiry</button>
+            </form>
+          </article>
+        </div>
+      </dialog>
+
+      <dialog id="dialog-partner" class="contact-dialog" aria-labelledby="dialog-partner-title">
+        <div class="dialog-shell">
+          <div class="dialog-header">
+            <p class="dialog-context">Partnership inquiry</p>
+            <button class="dialog-close" type="button" data-dialog-close aria-label="Close partnership form">Close</button>
+          </div>
+          <article class="form-card">
+            <div class="form-card-head">
+              <p class="form-kicker">Partnership</p>
+              <h3 id="dialog-partner-title">Community, research, or conservation partnership</h3>
+              <p>Use this form if you want to collaborate on science, implementation, outreach, or public-private alignment.</p>
+            </div>
+            <form name="bbci-partnership" method="POST" data-contact-form="bbci-partnership">
+              <input type="hidden" name="form-name" value="bbci-partnership" />
+              <p class="hidden-field">
+                <label>Do not fill this out if you're human: <input name="bot-field" tabindex="-1" aria-hidden="true" autocomplete="off" /></label>
+              </p>
+              <div class="form-fields">
+                <label>Full name<input type="text" name="name" required /></label>
+                <label>Organization<input type="text" name="organization" /></label>
+                <label>Email<input type="email" name="email" required /></label>
+                <label>Partnership type<select name="partnership_type" required><option value="">Select one</option><option>Community / public partner</option><option>Research partner</option><option>Conservation partner</option><option>Other</option></select></label>
+                <label class="field-wide">What would you like to work on?<textarea name="message" rows="5" required></textarea></label>
+              </div>
+              <button class="button button-solid" type="submit">Send Partnership Inquiry</button>
+            </form>
+          </article>
+        </div>
+      </dialog>
+
+      <dialog id="dialog-support" class="contact-dialog" aria-labelledby="dialog-support-title">
+        <div class="dialog-shell">
+          <div class="dialog-header">
+            <p class="dialog-context">Pilot support inquiry</p>
+            <button class="dialog-close" type="button" data-dialog-close aria-label="Close pilot support form">Close</button>
+          </div>
+          <article class="form-card">
+            <div class="form-card-head">
+              <p class="form-kicker">Pilot Support</p>
+              <h3 id="dialog-support-title">Funding and pilot support</h3>
+              <p>Use this form if you are interested in helping fund, sponsor, or support the BBCI pilot.</p>
+            </div>
+            <form name="bbci-pilot-support" method="POST" data-contact-form="bbci-pilot-support">
+              <input type="hidden" name="form-name" value="bbci-pilot-support" />
+              <p class="hidden-field">
+                <label>Do not fill this out if you're human: <input name="bot-field" tabindex="-1" aria-hidden="true" autocomplete="off" /></label>
+              </p>
+              <div class="form-fields">
+                <label>Full name<input type="text" name="name" required /></label>
+                <label>Organization<input type="text" name="organization" /></label>
+                <label>Email<input type="email" name="email" required /></label>
+                <label>Interest area<select name="interest_area" required><option value="">Select one</option><option>Pilot funding</option><option>Program sponsorship</option><option>Strategic support</option><option>Other</option></select></label>
+                <label class="field-wide">Tell us what kind of support you're considering<textarea name="message" rows="5" required></textarea></label>
+              </div>
+              <button class="button button-solid" type="submit">Send Support Inquiry</button>
+            </form>
+          </article>
+        </div>
+      </dialog>
 
       <footer class="site-footer">
         <div class="footer-brand">

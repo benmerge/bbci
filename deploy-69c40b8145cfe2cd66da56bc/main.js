@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
-const navLinks = [...document.querySelectorAll(".site-nav a[href^='#']")];
+const navLinks = [...document.querySelectorAll(".site-nav a[href^='#']:not([data-dialog-target])")];
 const revealItems = [...document.querySelectorAll(".reveal")];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
@@ -12,7 +12,7 @@ if (menuToggle && siteNav) {
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  navLinks.forEach((link) => {
+  document.querySelectorAll(".site-nav a").forEach((link) => {
     link.addEventListener("click", () => {
       siteNav.classList.remove("is-open");
       menuToggle.setAttribute("aria-expanded", "false");
@@ -58,6 +58,31 @@ const navObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => navObserver.observe(section));
+
+const dialogTriggers = [...document.querySelectorAll("[data-dialog-target]")];
+const dialogs = [...document.querySelectorAll("dialog.contact-dialog")];
+
+dialogTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    const dialog = document.querySelector(trigger.dataset.dialogTarget);
+    if (!dialog || typeof dialog.showModal !== "function") return;
+
+    event.preventDefault();
+    dialog.showModal();
+    const firstField = dialog.querySelector("input[name='name'], select, textarea");
+    firstField?.focus();
+  });
+});
+
+dialogs.forEach((dialog) => {
+  dialog.querySelectorAll("[data-dialog-close]").forEach((closeButton) => {
+    closeButton.addEventListener("click", () => dialog.close());
+  });
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+});
 
 const contactForms = [...document.querySelectorAll("form[data-contact-form]")];
 
