@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 360" role="img" aria-labelledby="title desc">
+  <title id="title">BBCI reverse logo</title>
+  <desc id="desc">Reverse Badgerland Biodiversity Corridors Initiative logo for dark backgrounds.</desc>
+  <image href="bbci-mark.svg" x="0" y="0" width="320" height="360"/>
+  <g fill="#FFFDF8">
+    <text x="365" y="198" font-family="Fraunces, Georgia, serif" font-size="150" font-weight="600" letter-spacing="2">BBCI</text>
+    <text x="373" y="246" font-family="Manrope, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="4">BADGERLAND BIODIVERSITY</text>
+    <text x="373" y="284" font-family="Manrope, Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="4">CORRIDORS INITIATIVE</text>
+  </g>
+</svg>

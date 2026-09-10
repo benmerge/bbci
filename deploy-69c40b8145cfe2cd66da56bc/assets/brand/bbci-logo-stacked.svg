@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 640" role="img" aria-labelledby="title desc">
+  <title id="title">BBCI</title>
+  <desc id="desc">Stacked Badgerland Biodiversity Corridors Initiative logo.</desc>
+  <image href="bbci-mark.svg" x="120" y="0" width="320" height="360"/>
+  <g fill="#193A27" text-anchor="middle">
+    <text x="280" y="492" font-family="Fraunces, Georgia, serif" font-size="138" font-weight="600" letter-spacing="2">BBCI</text>
+    <text x="280" y="542" font-family="Manrope, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="3">BADGERLAND BIODIVERSITY</text>
+    <text x="280" y="576" font-family="Manrope, Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="3">CORRIDORS INITIATIVE</text>
+  </g>
+</svg>

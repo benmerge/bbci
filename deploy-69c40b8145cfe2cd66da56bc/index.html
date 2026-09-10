@@ -20,13 +20,15 @@
       rel="stylesheet"
     />
     <link rel="icon" href="./assets/bbci-mark.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/brand/bbci-mark-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/brand/bbci-mark-180.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="site-shell">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="BBCI home">
-          <span class="brand-mark" aria-hidden="true"></span>
+          <img src="./assets/bbci-mark.svg" alt="" width="32" height="36" />
           <span>
             <strong>BBCI</strong>
             <small>Badgerland Biodiversity Corridors Initiative</small>
@@ -55,12 +57,7 @@
         <section class="hero">
           <div class="hero-copy">
             <p class="eyebrow">Wisconsin pilot · Launching 2026</p>
-            <div class="tag-row">
-              <span>Farmer-centered</span>
-              <span>Science-driven</span>
-              <span>Outcome-verified</span>
-              <span>Working-lands compatible</span>
-            </div>
+            <p class="hero-proof">Farmer-centered · Science-driven · Outcome-verified</p>
             <h1>Where farms, nature, and communities connect.</h1>
             <p class="hero-text">
               Building an outcome-verified network of habitat corridors across Wisconsin's working
@@ -76,22 +73,35 @@
             </div>
           </div>
 
-          <div class="hero-panel">
-            <div class="metric-card">
-              <span class="metric-label">Mission</span>
-              <strong>72h</strong>
-              <p>target farmer response time after an enrollment inquiry</p>
-            </div>
-            <div class="metric-card">
-              <span class="metric-label">Pilot scope</span>
-              <strong>3</strong>
-              <p>focus areas aligning habitat, stewardship, and local leadership</p>
-            </div>
-            <div class="metric-card">
-              <span class="metric-label">Outcome</span>
-              <strong>2026</strong>
-              <p>Wisconsin pilot launch for corridor-scale biodiversity learning</p>
-            </div>
+          <figure class="hero-art">
+            <img
+              src="./assets/bbci-mark.svg"
+              alt="Wisconsin filled with bands of sky, land, water, and grass"
+              width="320"
+              height="360"
+            />
+            <figcaption>
+              <span>Badgerland, connected</span>
+              <strong>Habitat corridors across working lands</strong>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="pilot-facts" aria-label="Pilot facts">
+          <div>
+            <span>Response</span>
+            <strong>72 hours</strong>
+            <p>Target follow-up after a farmer inquiry</p>
+          </div>
+          <div>
+            <span>Focus</span>
+            <strong>3 areas</strong>
+            <p>Habitat, stewardship, and local leadership</p>
+          </div>
+          <div>
+            <span>Launch</span>
+            <strong>2026</strong>
+            <p>Wisconsin corridor pilot</p>
           </div>
         </section>
 
@@ -473,15 +483,18 @@
       </main>
 
       <footer class="site-footer">
-        <div>
-          <strong>BBCI</strong>
-          <p>Badgerland Biodiversity Corridors Initiative</p>
+        <div class="footer-brand">
+          <img src="./assets/bbci-mark.svg" alt="" width="52" height="59" />
+          <div>
+            <strong>BBCI</strong>
+            <p>Badgerland Biodiversity Corridors Initiative</p>
+          </div>
         </div>
-        <div>
+        <div class="footer-detail">
           <strong>Contact</strong>
           <p><a href="mailto:info@badgerland-BBCI.org">info@badgerland-BBCI.org</a></p>
         </div>
-        <div>
+        <div class="footer-detail">
           <strong>Privacy</strong>
           <p>We use your contact info only to follow up about BBCI.</p>
         </div>
