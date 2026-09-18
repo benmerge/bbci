@@ -8,19 +8,13 @@
   "theme_color": "#193a27",
   "icons": [
     {
-      "src": "./assets/bbci-mark.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
-      "src": "./assets/brand/bbci-mark-192.png",
+      "src": "./assets/brand/bbci-logo-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./assets/brand/bbci-mark-512.png",
+      "src": "./assets/brand/bbci-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
