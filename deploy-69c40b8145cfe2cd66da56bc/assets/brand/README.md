@@ -1,10 +1,11 @@
 # BBCI brand assets
 
-The BBCI mark uses an accurate Wisconsin boundary filled with four flat landscape bands: sky, field, water, and forest. The narrow water band stays horizontal at every size.
+The standalone BBCI mark uses an accurate Wisconsin boundary filled with four flat landscape bands: sky, field, water, and forest. The narrow water band stays horizontal at every size. The hero also uses the supplied flowing-color logo, enlarged and clipped to that same Wisconsin boundary.
 
 ## Files
 
 - `bbci-mark.svg` - primary standalone mark
+- `../bbci-wisconsin-organic.svg` - hero mark with the supplied flowing-color logo clipped to Wisconsin
 - `bbci-logo-16.png`, `bbci-logo-32.png`, `bbci-logo-180.png`, `bbci-logo-192.png`, `bbci-logo-512.png` - supplied organic logo exports with transparent outer edges
 - `bbci-logo-horizontal.svg` - preferred full-name lockup
 - `bbci-logo-stacked.svg` - centered stacked lockup
