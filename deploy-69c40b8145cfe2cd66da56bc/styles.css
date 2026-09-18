@@ -364,7 +364,7 @@ h1 {
 
 .hero-mark {
   display: block;
-  width: min(82%, 380px);
+  width: min(88%, 420px);
   height: auto;
   margin: 0 auto;
   filter:
@@ -963,7 +963,7 @@ h2 {
   }
 
   .hero-mark {
-    width: min(78%, 310px);
+    width: min(84%, 330px);
   }
 
   .hero-art figcaption {
