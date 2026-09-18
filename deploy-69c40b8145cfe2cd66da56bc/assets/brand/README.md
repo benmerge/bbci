@@ -5,6 +5,8 @@ The BBCI mark uses an accurate Wisconsin boundary filled with four flat landscap
 ## Files
 
 - `bbci-mark.svg` - primary standalone mark
+- `../bbci-hero-composite.svg` - hero-only Wisconsin mark with the flowing watershed logo layered inside the state
+- `bbci-logo-16.png`, `bbci-logo-32.png`, `bbci-logo-180.png`, `bbci-logo-192.png`, `bbci-logo-512.png` - supplied organic logo exports with transparent outer edges
 - `bbci-logo-horizontal.svg` - preferred full-name lockup
 - `bbci-logo-stacked.svg` - centered stacked lockup
 - `bbci-logo-horizontal-reverse.svg` - light wordmark for dark backgrounds
