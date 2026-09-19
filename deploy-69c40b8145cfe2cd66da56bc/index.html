@@ -21,7 +21,7 @@
     />
     <link rel="icon" href="./assets/brand/bbci-logo-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="./assets/brand/bbci-logo-180.png" />
-    <link rel="stylesheet" href="./styles.css?v=20260918-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260919-wisconsin" />
   </head>
   <body>
     <div class="site-shell">
@@ -71,14 +71,29 @@
             </div>
           </div>
 
-          <figure class="hero-art">
-            <img
-              class="hero-mark"
-              src="./assets/bbci-wisconsin-organic.svg"
-              alt="Wisconsin silhouette filled with the BBCI flowing watershed logo"
-              width="320"
-              height="360"
-            />
+          <figure class="hero-art hero-brand">
+            <svg class="hero-mark" viewBox="0 0 320 360" role="img" aria-labelledby="hero-logo-title">
+              <title id="hero-logo-title">Wisconsin filled with layered sky, land, and water</title>
+              <defs>
+                <path id="wisconsin-shape" d="M116.3 32.4 73.1 50.1 58.2 46.5 53.6 52.9 49.7 51.9 49.5 91.1 30.2 102.9 22.7 114.6 22 124 33.1 132.9 27.7 143.1 25.6 178.5 37.7 190.6 47.6 191.5 65 204.1 69.1 214.8 92.8 232.2 98.6 242.9 99.9 269.9 107.2 277.2 101.6 285.6 103.2 300.3 107.4 311.4 123.5 318.1 126.6 326.5 259.3 327.6 261.3 308.5 254.1 277.5 263.9 248.7 262.3 235.9 272.8 215.3 274.9 191.6 298 143.3 293.6 142.5 288.8 151.9 285.6 150.9 278.8 173.2 276.5 169.1 268.2 172.7 261.5 185.1 249.9 192.5 257.5 166.5 267.2 163 269.3 156.3 262.3 150.6 266 137.7 255.3 138.6 259.1 115.3 245.2 109.8 246.8 104.3 241.2 99.1 218.7 96.7 199.1 86.8 151 73.7 146.5 62.8 121.5 49.5 124.3 52.4 112.5 57.2 121.6 37.3Z" />
+                <clipPath id="wisconsin-clip">
+                  <use href="#wisconsin-shape" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#wisconsin-clip)">
+                <rect width="320" height="360" fill="#d9be83" />
+                <path d="M-10 176C35 163 74 164 111 154C150 143 174 128 211 138C249 148 280 139 330 130V248H-10Z" fill="#789568" />
+                <path d="M-10 217C43 214 93 219 141 216C192 213 246 218 330 211V242C265 246 211 241 157 244C99 247 52 241-10 245Z" fill="#4e8794" />
+                <path d="M-10 245C52 241 99 247 157 244C211 241 265 246 330 242V370H-10Z" fill="#28563c" />
+                <g fill="none" stroke="#244733" stroke-width="3.6" stroke-linecap="round">
+                  <path d="M86 105q9-9 18 0q9-9 18 0" />
+                  <path d="M148 91q8-8 16 0q8-8 16 0" />
+                  <path d="M204 118q6-6 12 0q6-6 12 0" />
+                </g>
+              </g>
+              <use href="#wisconsin-shape" fill="none" stroke="#f6f1e5" stroke-width="5" stroke-linejoin="round" />
+              <use href="#wisconsin-shape" fill="none" stroke="#244733" stroke-width="1.5" stroke-linejoin="round" />
+            </svg>
           </figure>
         </section>
 

@@ -375,6 +375,15 @@ h1 {
     drop-shadow(10px 12px 0 rgba(20, 42, 29, 0.34));
 }
 
+.hero-brand {
+  gap: 0;
+}
+
+.hero-brand .hero-mark {
+  width: min(86%, 390px);
+  filter: drop-shadow(5px 7px 0 rgba(20, 42, 29, 0.24));
+}
+
 .pilot-facts span {
   display: block;
   margin-bottom: 0.3rem;
